@@ -3,8 +3,6 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
-
-  # Commit test
   def update
     @car = Car.find(params[:id])
     @car.update(car_params)
