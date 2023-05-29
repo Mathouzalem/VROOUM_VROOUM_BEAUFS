@@ -1,18 +1,16 @@
 
 
 
-<div class= "container" style = "background-color: black;">
-
-<div class="d-flex flew-row justify-content-center", class="car">
-
-    <div class="d-flex flex-column col-6-lg col-3-md">
-        <p style= "color: white";>Test </p>
+<div class= "container-css">
+  <div class= container-css></div>
+<%= image_tag  %>
+    <div class="cards-item" style="background-image:  ;">
       <%= image_tag(@car.photo,
         height: 300, crop: :fit) %>
-        <p class="text-center"><%= @car.title%></p>
+        <p><%= @car.title%></p>
     </div>
-</p>
-    <div class= "col-6 pt-5">
+
+    <div class="cards-item">
         <%= simple_form_for @car do |f| %>
           <%= f.input :title %>
           <%= f.input :photo %>
@@ -27,5 +25,4 @@
           <%= f.button :submit %>
         <% end %>
     </div>
-</div>
 </div>
