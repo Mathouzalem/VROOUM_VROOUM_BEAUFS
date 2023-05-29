@@ -1,0 +1,21 @@
+<div class="background" style="background-image: url(https://images.ctfassets.net/8tpbxzn2rg50/2n8pUxBSyZryYTirqhYYI0/20ec5d35772a6b9918b59ed2b13961de/tuning.jpg?w=1200&h=797&q=75&fit=thumb&f=center)">
+</div>
+
+<div class="container">
+  <h1>Ajouter une nouvelle tutute en location</h1>
+  <hr>
+
+  <%= simple_form_for(@car) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :motor%>
+    <%= f.input :fuel %>
+    <%= f.input :year%>
+    <%= f.input :brand%>
+    <%= f.input :modele%>
+    <%= f.input :power%>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create", class: "btn-grad"%>
+  <% end %>
+</div>
