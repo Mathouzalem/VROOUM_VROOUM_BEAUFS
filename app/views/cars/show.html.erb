@@ -1,6 +1,28 @@
 
-<div class="container">
-<h1>Hello</h1>
 
+<div class="container">
+<div class="show-card">
+  <div class="show-img">
+    </div>
+    <div class="show-description">
+      <div class="show-title">
+        <h1><%= @car.title %></h1>
+        <p><%= @car.price %>€ /jour</p>
+      </div>
+      <p><%= @car.description %></p>
+        <div class ="d-flex justify-content-between align-items-start">
+          <div class="criteres">
+            <p>Marque: <%= @car.brand %></p>
+            <p>Modèle: <%= @car.modele %></p>
+            <p>Motorisation: <%= @car.motor %></p>
+            <p>Carburant: <%=@car.fuel %></p>
+            <p>Puissance DIN: <%= @car.power %>Ch</p>
+          </div>
+          <div class="select-date">
+
+          </div>
+        </div>
+      </div>
+  </div>
+  <%= link_to "Louer" %>
 </div>
-<%= console %>
