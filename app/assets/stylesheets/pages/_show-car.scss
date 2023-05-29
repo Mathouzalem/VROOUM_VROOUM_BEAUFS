@@ -6,6 +6,8 @@
   height: 300px;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 0px #777;
 }
 
 .show-title {
@@ -25,4 +27,16 @@
   background-color: grey;
   height: 300px;
   width: 300px;
+}
+
+.show-atributes {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.show-description-nav{
+  display: flex;
+  justify-content: space-between;
 }

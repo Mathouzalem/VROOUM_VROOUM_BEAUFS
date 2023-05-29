@@ -1,6 +1,7 @@
 
 
 <div class="container">
+<%= link_to "Retour" %>
 <div class="show-card">
   <div class="show-img">
     </div>
@@ -9,8 +10,11 @@
         <h1><%= @car.title %></h1>
         <p><%= @car.price %>€ /jour</p>
       </div>
-      <p><%= @car.description %></p>
-        <div class ="d-flex justify-content-between align-items-start">
+      <div class="show-description-nav">
+        <p><%= @car.description %></p>
+        <%= link_to "Louer" %>
+      </div>
+        <div class =" show-atributes d-flex justify-content-between align-items-start">
           <div class="criteres">
             <p>Marque: <%= @car.brand %></p>
             <p>Modèle: <%= @car.modele %></p>
@@ -24,5 +28,5 @@
         </div>
       </div>
   </div>
-  <%= link_to "Louer" %>
+
 </div>
