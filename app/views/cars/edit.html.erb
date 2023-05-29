@@ -1,13 +1,30 @@
-<%= simple_form_for @car do |f| %>
-  <%= f.input :title %>
-  <%= f.input :photo %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :motor %>
-  <%= f.input :fuel %>
-  <%= f.input :brand %>
-  <%= f.input :year %>
-  <%= f.input :modele %>
-  <%= f.input :power %>
-  <%= f.button :submit %>
-<% end %>
+
+
+
+<div class= "container">
+<div class="d-flex flew-row justify-content-center">
+
+    <div class="d-flex flex-column col-6-lg col-3-md">
+
+      <%= image_tag(@car.photo,
+        height: 300, crop: :fit) %>
+        <p class="text-center"><%= @car.title%></p>
+    </div>
+
+    <div class= "col-6 pt-5">
+        <%= simple_form_for @car do |f| %>
+          <%= f.input :title %>
+          <%= f.input :photo %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.input :motor %>
+          <%= f.input :fuel %>
+          <%= f.input :brand %>
+          <%= f.input :year %>
+          <%= f.input :modele %>
+          <%= f.input :power %>
+          <%= f.button :submit %>
+        <% end %>
+    </div>
+</div>
+</div>
