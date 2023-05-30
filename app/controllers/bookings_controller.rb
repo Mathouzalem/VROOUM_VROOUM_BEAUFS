@@ -1,7 +1,11 @@
 class BookingsController < ApplicationController
   def index
-    @user = current_user.id
-    @bookings = Booking.where(user_id: @user)
+    @bookings = Booking.where(user: current_user)
+  end
+    
+  def show
+    @booking = Booking.find(params[:id])
+    @car = @booking.car
   end
 
   def create
@@ -33,7 +37,4 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
 end
