@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @user = current_user.id
-    @bookings = Booking.where(user_id: @user)
+    @bookings = Booking.where(user: current_user)
   end
 
   def create
@@ -35,5 +34,6 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @car = @booking.car
   end
 end

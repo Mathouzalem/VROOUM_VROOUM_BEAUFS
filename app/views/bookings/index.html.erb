@@ -1,10 +1,11 @@
 
 <h1>Mes reservations</h1>
 
+
 <div class="container">
     <% @bookings.each do |booking| %>
   <div class="card-list">
-
+    <h1><%= booking.id %></h1>
     <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
     <div class="card-list-description">
        <h3><%= booking.car.title %></h3>
