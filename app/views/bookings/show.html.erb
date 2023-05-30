@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> Réservation : <%= @booking.start_date %> <%= @booking.end_date %></h1>
+  <p><%= @car.title %></p>
+  <p><%= @car.price %> € par jour</p>
+  <p><%= @car.description %></p>
+  <p>Marque: <%= @car.brand %></p>
+  <p>Modèle: <%= @car.modele %></p>
+  <p>Motorisation: <%= @car.motor %></p>
+  <p>Carburant: <%=@car.fuel %></p>
+  <p>Puissance DIN: <%= @car.power %>Ch</p>
+</div>
+
+
+
+<%# booking :
+        t.time "start_date"
+    t.time "end_date"
+    t.string "status" %>

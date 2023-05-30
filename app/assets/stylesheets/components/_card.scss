@@ -1,17 +1,33 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  a {
+    text-decoration: none;
+  }
 }
 
 .cardo {
-  margin: 10px;
+  margin: 20px;
   flex-wrap: wrap;
   align-content: center;
+  background-color: #eae8e8;
+  color: #312B2F;
+  border: 10px;
+  border-radius: 10px;
 }
 
-.title {
-  padding-top: 50px;
+.fond-cards {
+  background-color: #DAD2CF;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+.title-cards {
+  padding-top: 30px;
   text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #312B2F;
+  padding-bottom: 20px;
 }
 
 .cardo > img {
@@ -20,4 +36,15 @@
   object-fit: cover;
   border-radius: 10px;
   padding-bottom: 10px;
+}
+
+.content-cards p {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.content-cards > h5 {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-family: 'Playfair Display', serif;
 }
