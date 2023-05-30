@@ -1,9 +1,8 @@
 class CarsController < ApplicationController
-
   def index
     @cars = Car.all
   end
-  
+
   def edit
     @car = Car.find(params[:id])
   end
@@ -15,11 +14,12 @@ class CarsController < ApplicationController
     else
       render :edit, stauts: :unprocessable_entity
     end
+  end
 
   def show
     @car = Car.find(params[:id])
   end
-    
+
   def new
     @car = Car.new
   end
