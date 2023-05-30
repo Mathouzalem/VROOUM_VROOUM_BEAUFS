@@ -22,9 +22,15 @@
             <p>Carburant: <%=@car.fuel %></p>
             <p>Puissance DIN: <%= @car.power %>Ch</p>
           </div>
-          <div class="select-date">
 
+          <div class="select-date">
+            <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+            <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+            <%= f.submit 'Réserver' %>
+            <% end %>
           </div>
+
         </div>
       </div>
   </div>
