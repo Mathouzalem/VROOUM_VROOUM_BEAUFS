@@ -1,6 +1,7 @@
 .card-list{
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   background-color: white;
   border-radius: 4px;
   padding: 10px;
@@ -12,4 +13,9 @@
   background-color: grey;
   width: 150px;
   margin-right: 20px;
+}
+
+.card-list-booking{
+  height: 100%;
+  width: 20%;
 }
