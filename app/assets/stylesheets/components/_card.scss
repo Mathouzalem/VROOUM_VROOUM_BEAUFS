@@ -1,0 +1,23 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cardo {
+  margin: 10px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.cardo > img {
+  height: 165px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
