@@ -15,7 +15,7 @@ class CarsController < ApplicationController
     else
       render :edit, stauts: :unprocessable_entity
     end
-
+    
   def show
     @car = Car.find(params[:id])
   end
