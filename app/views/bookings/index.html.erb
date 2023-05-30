@@ -1,0 +1,27 @@
+
+<h1>Mes reservations</h1>
+
+<div class="container">
+    <% @bookings.each do |booking| %>
+  <div class="card-list">
+
+    <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
+    <div class="card-list-description">
+       <h3><%= booking.car.title %></h3>
+        <p><%= booking.car.description %></p>
+        <p id="card-list-p"><%= booking.car.created_at%></p>
+    </div>
+
+
+    <div class="card-list-booking">
+        <div class="card-list-status">Status : <%= booking.status %> xxx </div>
+        <div class= "card-list-booking-details">
+            <div>
+                <p class="booking-date">Start date :<%= booking.start_date %></p>
+                <p class="booking-date">End Date : <%= booking.end_date %></p>
+            </div>
+    </div>
+
+    </div>
+    <% end %>
+</div>

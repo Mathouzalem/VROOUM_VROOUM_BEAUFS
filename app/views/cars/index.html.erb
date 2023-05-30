@@ -3,16 +3,16 @@
 
   <div class="cards">
     <% @cars.each do |car| %>
-    <%= link_to(car_path(car)) do %>
-      <div class="cardo">
-        <img src="https://i.pinimg.com/564x/eb/7a/e4/eb7ae422e4d0e58aa855c8cb8722f50d.jpg" />
-        <div class="content-cards">
-          <h5><%=car.title%></h5>
-          <p><%= car.description %></p>
-          <p><%= car.price %>€ par jour</p>
+      <%= link_to(car_path(car)) do %>
+        <div class="cardo">
+          <img src="https://i.pinimg.com/564x/eb/7a/e4/eb7ae422e4d0e58aa855c8cb8722f50d.jpg" />
+          <div class="content-cards">
+            <h5><%=car.title%></h5>
+            <p><%= car.description %></p>
+            <p><%= car.price %>€ par jour</p>
+          </div>
         </div>
-      </div>
+       <% end %>
       <% end %>
-    <% end %>
   </div>
 </div>
