@@ -1,22 +1,20 @@
-<div class="container">
-
-<div class="d-flex align-items-center justify-content-between">
-  <h1>Mes annonces</h1>
-  <%= link_to "Nouvelle annonce", new_car_path, class: "link_to" %>
-</div>
-  <% @cars.each do |car| %>
-    <%= link_to do %>
-      <div class="card-list">
-        <%= image_tag "#{car.photo}", class: "img-card-list" %>
-        <div class="card-list-description">
-          <h3> <%= car.title %></h3>
-          <p> <%= car.description %></p>
-          <p id="card-list-p"> <%= car.created_at %></p>
-
+<div class="fondmyindex">
+  <div class="d-flex align-items-center justify-content-between">
+    <h1 class="h1myindex">Mes annonces</h1>
+    <%= link_to "Nouvelle annonce", new_car_path, class: "btn-gradmyindex " %>
+  </div>
+    <% @cars.each do |car| %>
+      <%= link_to do %>
+        <div class="card-list">
+          <%= image_tag("carpardefaut.png" , class: "img-card-list") %>
+          <div class="card-list-description">
+            <h3> <%= car.title %></h3>
+            <p> <%= car.description %></p>
+            <p id="card-list-p"> <%= car.created_at %></p>
+          </div>
+          <div class="card-list-booking">
+          </div>
         </div>
-        <div class="card-list-booking">
-        </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
