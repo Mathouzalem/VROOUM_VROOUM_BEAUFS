@@ -1,0 +1,42 @@
+.show-img {
+  background-image: url(https://cdn-s-www.ledauphine.com/images/EB607817-3A74-4724-881F-ADF470D1B24F/NW_detail_M/title-1659014000.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 0px #777;
+}
+
+.show-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.criteres {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  width: 70%;
+}
+
+.select-date {
+  background-color: grey;
+  height: 300px;
+  width: 300px;
+}
+
+.show-atributes {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.show-description-nav{
+  display: flex;
+  justify-content: space-between;
+}

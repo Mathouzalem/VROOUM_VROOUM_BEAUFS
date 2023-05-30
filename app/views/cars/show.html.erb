@@ -1,0 +1,32 @@
+
+
+<div class="container">
+<%= link_to "Retour" %>
+<div class="show-card">
+  <div class="show-img">
+    </div>
+    <div class="show-description">
+      <div class="show-title">
+        <h1><%= @car.title %></h1>
+        <p><%= @car.price %>€ /jour</p>
+      </div>
+      <div class="show-description-nav">
+        <p><%= @car.description %></p>
+        <%= link_to "Louer" %>
+      </div>
+        <div class =" show-atributes d-flex justify-content-between align-items-start">
+          <div class="criteres">
+            <p>Marque: <%= @car.brand %></p>
+            <p>Modèle: <%= @car.modele %></p>
+            <p>Motorisation: <%= @car.motor %></p>
+            <p>Carburant: <%=@car.fuel %></p>
+            <p>Puissance DIN: <%= @car.power %>Ch</p>
+          </div>
+          <div class="select-date">
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
