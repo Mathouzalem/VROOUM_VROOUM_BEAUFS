@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :cars do
     resources :bookings, only: :create
   end
+
+  get "/mycars", to: "cars#my_index"
 end
