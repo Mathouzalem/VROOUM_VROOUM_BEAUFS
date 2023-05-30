@@ -1,0 +1,28 @@
+
+
+
+<div class= "container-css">
+  <div class= container-css></div>
+    <%= image_tag  'https://www.challenges.fr/assets/img/2022/06/28/cover-r4x3w1200-62bac501b421a-mg4-exterieur.jpg', width:"300px", height:"300px"%>
+    <div class="cards-item" style="background-image:  ;">
+      <%# <%= image_tag(@car.photo,
+        <%# height: 300, crop: :fit)  %>
+        <p><%= @car.title%></p>
+    </div>
+
+    <div class="cards-item">
+        <%= simple_form_for @car do |f| %>
+          <%= f.input :title %>
+          <%= f.input :photo %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.input :motor %>
+          <%= f.input :fuel %>
+          <%= f.input :brand %>
+          <%= f.input :year %>
+          <%= f.input :modele %>
+          <%= f.input :power %>
+          <%= f.button :submit %>
+        <% end %>
+    </div>
+</div>
