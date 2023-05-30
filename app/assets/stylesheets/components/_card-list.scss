@@ -1,6 +1,8 @@
 .card-list{
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
+
   background-color: #efe5e2;
   border-radius: 4px;
   padding: 10px;
@@ -14,6 +16,10 @@
   margin-right: 20px;
 }
 
+.card-list-booking{
+  height: 100%;
+  width: 20%;
+}
 .fondmyindex {
   background-color: #DAD2CF;
   padding: 60px;

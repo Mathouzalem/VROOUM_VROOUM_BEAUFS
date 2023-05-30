@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:index, :show]
   get "/mycars", to: "cars#my_index"
+
+  get "/bookings/:id/canceled", to: "bookings#canceled", as: :cancel_booking
 end

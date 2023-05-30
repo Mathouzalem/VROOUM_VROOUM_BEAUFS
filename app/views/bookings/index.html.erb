@@ -14,16 +14,17 @@
     </div>
 
 
-    <div class="card-list-booking">
-        <div class="card-list-status">Status : <%=booking.status %> </div>
+    <div class="card-list-booking d-flex">
         <div class= "card-list-booking-details">
-            <div>
-                <p class="booking-date">Start date :<%= booking.start_date %></p>
-                <p class="booking-date">End Date : <%= booking.end_date %></p>
-            </div>
-    </div>
-        <div class="cards-item">
-
+          <p class="booking-date">Start date :<%= booking.start_date %></p>
+          <p class="booking-date">End Date : <%= booking.end_date %></p>
+        </div>
+        <div class="card-list-status">
+        <p>Status : <%= booking.status %></p>
+        <% if booking.status != "Annulé" %>
+          <%= link_to "Annuler", cancel_booking_path(booking)%>
+        <% end %>
+        </div>
     </div>
     <% end %>
 </div>
