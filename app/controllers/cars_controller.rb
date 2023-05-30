@@ -3,8 +3,12 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
+  def my_index
+    @cars = Car.where(user_id: current_user.id)
+  end
+
   def edit
-    @car = Car.find(params[:id])
+    @cars = Car.find(params[:id])
   end
 
   def update

@@ -1,14 +1,18 @@
-<div class="container">
-  <h1 class="title">Les grosses carettes tunées bien fraîches chacal</h1>
+<div class="fond-cards">
+  <h1 class="title-cards">Les grosses carettes tunées bien fraîches chacal</h1>
 
   <div class="cards">
     <% @cars.each do |car| %>
-      <div class="cardo">
-        <img src="https://images.unsplash.com/photo-1638720307229-3ed5f99eee0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" />
-        <h5><%= link_to car.title, car_path(car) %></h5>
-        <p><%= car.description %></p>
-        <p><%= car.price %>€ par jour</p>
-      </div>
-    <% end %>
+      <%= link_to(car_path(car)) do %>
+        <div class="cardo">
+          <img src="https://i.pinimg.com/564x/eb/7a/e4/eb7ae422e4d0e58aa855c8cb8722f50d.jpg" />
+          <div class="content-cards">
+            <h5><%=car.title%></h5>
+            <p><%= car.description %></p>
+            <p><%= car.price %>€ par jour</p>
+          </div>
+        </div>
+       <% end %>
+      <% end %>
   </div>
 </div>

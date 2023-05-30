@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_143357) do
 
   create_table "cars", force: :cascade do |t|
     t.string "title"
-    t.text "photo"
+    t.string "photo", default: "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"
     t.text "description"
     t.integer "price"
     t.string "motor"
