@@ -25,8 +25,9 @@
 
           <div class="select-date">
             <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
-            <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
-            <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+            <input type="text" data-flatpickr-target="date" data-action="change->flatpickr#setDates">
+            <%= f.input :start_date, label: "Réservation", as: :string, input_html: { data:{flatpickr_target:"startTime"}}%>
+            <%= f.input :end_date, as: :string, input_html: {  data:{flatpickr_target:"endTime"} }%>
             <%= f.submit 'Réserver' %>
             <% end %>
           </div>
@@ -36,3 +37,5 @@
   </div>
 
 </div>
+
+<%= console %>
