@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "faker"
 puts "Cleaning database..."
 User.destroy_all
-
 puts "Creating users..."
 mathilde = User.create!(first_name: "Mathilde", last_name: "bonhomme", email: "mathilde@mail.com", password: "123456")
 mathieu = User.create!(first_name: "Mathieu", last_name: "cozian", email: "mathieu@mail.com", password: "123456")
@@ -17,7 +17,7 @@ puts "Finished!"
 
 puts "Cleaning database..."
 Car.destroy_all
-
+Booking.destroy_all
 puts "Creating cars..."
 car1 = { title: "Peugeot 308 flammes gros pots", description: "Des gros pots qui envoient du lourd", price: 20, user: galmier}
 car2 = { title: "Renault Clio 3", description: "Rabaissée au max, attention aux dos d'âne", price: 30, user: mathilde }
@@ -29,3 +29,13 @@ car4 = { title: "Honda Civic", description: "Appartenue à Dominique Toreto, si�
   puts "Created #{car.title}"
 end
 puts "Finished!"
+
+puts "Bookings "
+puts "Cleaning Database"
+
+
+booking1 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: mathieu, car:mathieu.cars.first}
+Booking.create(booking1)
+
+
+puts "booking created"
