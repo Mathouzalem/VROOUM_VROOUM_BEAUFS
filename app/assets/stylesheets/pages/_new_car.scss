@@ -1,13 +1,20 @@
-body{
-  background-color: lightgrey;
+.containernew{
+  margin: auto;
+  width: 1000px;
+  margin-top: 1em;
+  background-color: #DAD2CF;
 }
 
-.container{
-  width: 600px;
-  margin-top: 1em;
-}
 .background{
   height: 400px;
   background-size: cover;
-  background-position: 0 -120px;
+  background-position: 0 -500px;
+}
+
+.titlenew {
+  font-family: 'Playfair Display', serif;
+}
+
+bgnewcar {
+
 }
