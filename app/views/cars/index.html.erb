@@ -1,18 +1,24 @@
 <div class="fond-cards">
   <h1 class="title-cards">Les grosses carettes tunées bien fraîches chacal</h1>
 
+<div class="container">
   <div class="cards">
     <% @cars.each do |car| %>
       <%= link_to(car_path(car)) do %>
         <div class="cardo">
           <%=image_tag("carsfondblanc.jpg")%>
           <div class="content-cards">
-            <h5><%=car.title%></h5>
-            <p><%= car.description %></p>
-            <p><%= car.price %>€ par jour</p>
+          <div class="title-descrition-cardo">
+              <h5> <strong><%=car.title%></strong></h5>
+              <p id="descrition-paragraphe"><%= car.description %></p>
+            </div>
+            <div class="price-cardo">
+             <p><strong><%= car.price %>€</strong><span id="price-text"> par jour</span> </p>
+            </div>
           </div>
         </div>
        <% end %>
       <% end %>
+    </div>
   </div>
 </div>

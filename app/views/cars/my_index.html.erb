@@ -2,29 +2,33 @@
   <div class="d-flex align-items-center justify-content-between">
     <h1 class="h1myindex">Mes annonces</h1>
     <%= link_to "Nouvelle annonce", new_car_path, class: "btn-gradmyindex " %>
-  </div>
+    </div>
     <% @cars.each do |car| %>
-      <%= link_to do %>
-        <div class="card-list">
-          <%= image_tag("carpardefaut.png" , class: "img-card-list") %>
+  <div class="card-list">
+      <%= link_to(car_path(car)) do %>
           <div class="card-list-description">
-            <h3> <%= car.title %></h3>
-            <p> <%= car.description %></p>
-            <p id="card-list-p"> <%= car.created_at %></p>
-          </div>
+            <%= image_tag("carpardefaut.png" , class: "img-card-list") %>
+              <div class="card-list-description-2">
+                <div>
+                  <h3> <%= car.title %></h3>
+                  <h5> <%= car.description %></h5>
+                </div>
+                <p id="card-list-p"> <%= car.created_at %></p>
+              </div>
+            </div>
+            <div class="card-list-booking">
+              <div class="p-status">
+                <% if car.bookings.first != nil %>
+                  <p> <strong>Statut:</strong> <%=car.bookings.first.status %></p>
+                <% else %>
+                  <p>Pas de location</p>
+                <% end %>
+              </div>
+              <%= link_to "Mes demandes", car_path(car),class:"btn btn-primary m-2" %>
+              <%= link_to "Supprimer", car_path(car), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sur de supprimer l'annonce?"}, class:"btn btn-secondary m-2" %>
+            </div>
         </div>
-        <div class="card-list-booking">
-          <% if car.bookings.first != nil %>
-            <p>Statut: <%=car.bookings.first.status %></p>
-          <% else %>
-            <p>Pas de locations</p>
-          <% end %>
-          <%= link_to "Mes demandes", car_path(car),class:"btn btn-primary m-2" %>
-          <%= link_to "Supprimer", car_path(car), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sur de supprimer l'annonce?"}, class:"btn btn-secondary m-2" %>
-        </div>
-      </div>
       <% end %>
     <% end %>
+  </div>
 </div>
-
-<%= console %>
