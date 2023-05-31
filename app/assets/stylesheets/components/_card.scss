@@ -1,19 +1,29 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
   a {
     text-decoration: none;
   }
 }
 
+.content-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 10px;
+}
+
 .cardo {
-  margin: 20px;
+  height: 400px;
   flex-wrap: wrap;
   align-content: center;
   background-color: #eae8e8;
   color: #312B2F;
   border: 10px;
   border-radius: 10px;
+  box-shadow: 0px 0px 6px 0px #777;
 }
 
 .fond-cards {
@@ -31,20 +41,33 @@
 }
 
 .cardo > img {
-  height: 196px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  padding-bottom: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .content-cards p {
-  padding-left: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 0px;
+  text-overflow: ellipsis;
 }
 
 .content-cards > h5 {
-  padding-left: 10px;
+
   padding-bottom: 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.title-descrition-cardo {
+  overflow: hidden;
+}
+
+#descrition-paragraphe{
+  color: #777;
+}
+#price-text {
+  color: #777;
+  opacity: .8;
+  font-style: italic;
+  font-size: 13px;
 }

@@ -1,7 +1,9 @@
 class CarsController < ApplicationController
+
   def index
     @cars = Car.all
   end
+
 
   def my_index
     @cars = Car.where(user_id: current_user.id)
