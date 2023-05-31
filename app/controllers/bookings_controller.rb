@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user: current_user)
   end
 
-  def my_car_request
+  def my_car_request # * Méthode concernant le status (accept/rejected)
     @car = Car.find(params[:car_id])
   end
 
@@ -13,13 +13,13 @@ class BookingsController < ApplicationController
     redirect_to car_mes_demandes_path(@booking.car)
   end
 
-  def accepted
+  def accepted # ? a t-on encore besoin de cette méthdoe ?
     @booking.find(params[:id])
     @booking.status = "Accepté"
     @booking.save!
   end
 
-  def declined
+  def declined # ? a t-on encore besoin de cette méthdoe ?
     @booking.find(params[:id])
     @booking.status = "Décliné"
     @booking.save!
@@ -69,7 +69,7 @@ end
 
 
 
-
+ # ! Doublon de la méthode create
  # def create
   #   @booking = Booking.new(booking_params)
   #   @booking.status = "En attente"
