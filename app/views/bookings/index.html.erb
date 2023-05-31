@@ -1,31 +1,27 @@
 
-<h1>Mes reservations</h1>
 
-
-<div class="container">
-    <% @bookings.each do |booking| %>
-  <div class="card-list">
-    <h1><%= booking.id %></h1>
-    <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
-    <div class="card-list-description">
-       <h3><%= booking.car.title %></h3>
-        <p><%= booking.car.description %></p>
-        <p id="card-list-p"><%= booking.car.created_at%></p>
-        <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id) %>
-    </div>
-
-
-    <div class="card-list-booking d-flex">
-        <div class= "card-list-booking-details">
-          <p class="booking-date">Start date :<%= booking.start_date %></p>
-          <p class="booking-date">End Date : <%= booking.end_date %></p>
-        </div>
-        <div class="card-list-status">
-        <p>Status : <%= booking.status %></p>
-        <% if booking.status != "Annulé" %>
-          <%= link_to "Annuler", cancel_booking_path(booking)%>
+<div class="fondmyindex">
+  <h1 class="h1myindex">Mes reservations</h1>
+      <div class="card-list">
+        <% @bookings.each do |booking| %>
+            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
+            <div class="card-list-description">
+              <h3><%= booking.car.title %></h3>
+                <p><%= booking.car.description %></p>
+                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id) %>
+            </div>
+            <div class="card-list-booking d-flex">
+                <div class= "card-list-booking-details">
+                  <p class="booking-date">Start date :<%= booking.start_date %></p>
+                  <p class="booking-date">End Date : <%= booking.end_date %></p>
+                </div>
+                <div class="card-list-status">
+                <p>Status : <%= booking.status %></p>
+                <% if booking.status != "Annulé" %>
+                  <%= link_to "Annuler", cancel_booking_path(booking)%>
+                <% end %>
+                </div>
+            </div>
         <% end %>
-        </div>
     </div>
-    <% end %>
 </div>
