@@ -13,6 +13,15 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to bookings_path
+    else
+      render :booking
+    end
+  end
+
   def accepted
     @booking.find(params[:id])
     @booking.status = "Accepté"
