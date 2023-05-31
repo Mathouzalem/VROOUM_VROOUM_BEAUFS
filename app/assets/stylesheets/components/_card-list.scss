@@ -47,6 +47,15 @@
   height: 100%;
   width: 18%;
 }
+
+.card-list-booking-details {
+  margin-right: 20px;
+}
+
+.card-list-booking-2{
+  height: 100%;
+  width: 29%;
+}
 .fondmyindex {
   background-color: #DAD2CF;
   padding: 60px;
@@ -80,8 +89,19 @@
 
 .p-status{
   color: #777;
+  margin: 3px;
 }
 
 .card-list a {
   text-decoration: none;
+}
+
+.booking-date {
+  margin: 3px;
+  color:#312B2F;
+}
+
+.booking-date-2 {
+  margin: 3px;
+  color: #777;
 }
