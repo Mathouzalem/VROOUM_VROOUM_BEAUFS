@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "faker"
 puts "Cleaning database..."
+Review.destroy_all
 Booking.destroy_all
 User.destroy_all
 puts "Creating users..."
