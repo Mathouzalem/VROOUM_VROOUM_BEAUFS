@@ -5,11 +5,15 @@
 
       <div class="card-list">
         <% @bookings.each do |booking| %>
-            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
             <div class="card-list-description">
-              <h3><%= booking.car.title %></h3>
+            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
+            <div class="card-list-description-2">
+              <div>
+                <h3><%= booking.car.title %></h3>
                 <p><%= booking.car.description %></p>
+              </div>
                 <p id="card-list-p"><%= booking.car.created_at%></p>
+            </div>
             </div>
             <div class="card-list-booking d-flex">
                 <div class= "card-list-booking-details">
