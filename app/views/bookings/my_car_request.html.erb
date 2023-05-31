@@ -1,0 +1,38 @@
+<%= @car.title %>
+<% @car.bookings.each do |booking| %>
+
+<div class="bookings">
+  <div class="booking">
+        <div class="booking-info">
+          <div class="booking-info-title">
+            <%= booking.user.first_name %>
+          </div>
+          <div class="booking-info-details">
+            <%= booking.start_date.strftime('%l:%M %p') %> - <%= booking.end_date.strftime('%l:%M %p') %>
+          </div>
+        </div>
+      </div>
+  <div class="booking-actions">
+    <% if booking.status == "En attente" %>
+
+    <div class="d-flex">
+      <%= simple_form_for booking do |f| %>
+        <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+        <%= f.submit 'Accepter', class: 'btn btn-info' %>
+      <% end %>
+
+      <%= simple_form_for booking do |f| %>
+        <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+        <%= f.submit 'Rejecter', class: 'btn btn-light' %>
+      <% end %>
+    </div>
+
+  <% else %>
+    <%= booking.status %>
+
+  <% end %>
+  </div>
+
+
+
+  <%end %>
