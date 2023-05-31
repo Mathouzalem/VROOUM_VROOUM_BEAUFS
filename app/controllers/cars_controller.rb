@@ -1,4 +1,8 @@
 class CarsController < ApplicationController
+  def my_index
+    @cars = Car.where(user_id: current_user.id)
+  end
+
   def index
     @cars = Car.all
   end
@@ -15,6 +19,7 @@ class CarsController < ApplicationController
       render :edit, stauts: :unprocessable_entity
     end
   end
+
   def show
     @car = Car.find(params[:id])
     @booking = Booking.new
