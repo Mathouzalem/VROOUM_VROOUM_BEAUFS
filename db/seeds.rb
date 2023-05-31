@@ -34,8 +34,12 @@ puts "Bookings "
 puts "Cleaning Database"
 
 
-booking1 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: mathieu, car: mathilde.cars.first }
+booking1 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: galmier, car:mathieu.cars.first}
+booking2 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: mathieu, car:galmier.cars.first}
+
 Booking.create(booking1)
+Booking.create(booking2)
+
 
 
 puts "booking created"

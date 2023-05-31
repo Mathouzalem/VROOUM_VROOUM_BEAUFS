@@ -1,41 +1,36 @@
 
-
-<div class="container">
-<%= link_to "Retour", cars_path, class:"link_to"%>
-<div class="show-card">
-  <div class="show-img">
+<div class="fondshow">
+  <h1 class="title-show"><%= @car.title %></h1>
+  <div class="marge">
+   <div class="cardsshow">
+      <div class="cardoshow">
+         <div class="parentshow">
+            <div class="rondshow"></div>
+            <%=image_tag("carpardefaut.png" , class:"img-show")%>
+            </div>
+        </div>
+      <div class="cardoshow">
+      <div class="textshow">
+        <p>Marque: <%= @car.brand %></p>
+        <p>Modèle: <%= @car.modele %></p>
+        <p>Motorisation: <%= @car.motor %></p>
+        <p>Carburant: <%=@car.fuel %></p>
+        <p>Puissance DIN: <%= @car.power %>Ch</p>
+        <p><%= @car.price %>€ par jour</p>
+        <%= link_to "Louer", cars_path, class: "btn-gradshow"%>
+        <%= link_to "Retour", cars_path, class:"btn-gradshowback"%>
+      </div>
     </div>
-    <div class="show-description">
-      <div class="show-title">
-        <h1><%= @car.title %></h1>
-        <p><%= @car.price %>€ /jour</p>
-      </div>
-      <div class="show-description-nav">
-        <p><%= @car.description %></p>
-        <%= link_to "Louer" %>
-      </div>
-        <div class =" show-atributes d-flex justify-content-between align-items-start">
-          <div class="criteres">
-            <p>Marque: <%= @car.brand %></p>
-            <p>Modèle: <%= @car.modele %></p>
-            <p>Motorisation: <%= @car.motor %></p>
-            <p>Carburant: <%=@car.fuel %></p>
-            <p>Puissance DIN: <%= @car.power %>Ch</p>
-          </div>
+  </div>
+  </div>
+</div>
 
-          <div class="select-date">
+
+ <div class="select-date">
             <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
             <input type="text" data-flatpickr-target="date" data-action="change->flatpickr#setDates">
             <%= f.input :start_date, label: "Réservation", as: :string, input_html: { data:{flatpickr_target:"startTime"}}%>
             <%= f.input :end_date, as: :string, input_html: {  data:{flatpickr_target:"endTime"} }%>
             <%= f.submit 'Réserver' %>
             <% end %>
-          </div>
-
-        </div>
-      </div>
-  </div>
-
 </div>
-
-<%= console %>

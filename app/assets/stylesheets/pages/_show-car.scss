@@ -1,42 +1,104 @@
-.show-img {
-  background-image: url(https://cdn-s-www.ledauphine.com/images/EB607817-3A74-4724-881F-ADF470D1B24F/NW_detail_M/title-1659014000.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 9px 0px #777;
-}
-
-.show-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.criteres {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
-  width: 70%;
-}
-
 .select-date {
   background-color: grey;
   height: 300px;
   width: 300px;
 }
 
-.show-atributes {
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.fondshow {
+  background-color: #312B2F;
+  padding-bottom: 20px;
 }
 
-.show-description-nav{
-  display: flex;
-  justify-content: space-between;
+.title-show {
+  color: #DAD2CF;
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  padding-left: 135px;
+  padding-top: 40px;
+}
+
+.marge {
+  margin-left: 60px;
+}
+
+.rondshow {
+  position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 50px;
+    left: 70px;
+    background: #443e42;
+    border-radius: 300% / 300%;
+}
+
+.img-show {
+  margin-top: 46px;
+    margin-left: 56px;
+    position: absolute;
+    z-index: 1;
+    width: 600px;
+}
+
+.parentshow {
+  position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.textshow {
+  margin: 123px;
+  color: #DAD2CF;
+}
+
+.textshow > p {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+
+.btn-gradshow {
+  background-image: linear-gradient(to right, #DC3C18 0%, #DC3C18 51%, #DC3C18  100%);
+  margin-top: 70px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-gradshow:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-gradshowback {
+  background-image: linear-gradient(to right, #443e42 0%, #443e42 51%, #443e42  100%);
+  margin-top: 70px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-gradshowback:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.cardsshow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cardoshow {
+  flex-wrap: wrap;
+  align-content: center;
 }
