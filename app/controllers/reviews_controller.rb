@@ -14,13 +14,13 @@ class ReviewsController < ApplicationController
     @review.booking_id = @booking.id
     @car = @review.booking.car.id
     if @review.save
+      @booking.review_id = @review.id
+      @booking.save
       redirect_to car_path(@car)
     else
       render :new, :unprocessable_entity
     end
   end
-
-
 
   private
 

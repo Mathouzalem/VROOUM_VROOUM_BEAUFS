@@ -33,5 +33,16 @@
       </div>
     </div>
   </div>
+    <div>
+        <h3>Avis: </h3>
+        <% @car.bookings.each do |booking| %>
+          <% @review = booking.reviews.first  %>
+          <div class="review-card">
+              <%= @review.comment %>
+              <%= @review.rate %>
+          </div>
+          <% end %>
+    </div>
   </div>
 </div>
+<%= console %>
