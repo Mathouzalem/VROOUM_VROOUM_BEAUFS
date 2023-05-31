@@ -23,7 +23,7 @@
                 </div>
                 <div class="card-list-status">
                 <p class="p-status"> <strong>Statut: </strong><%= booking.status %></p>
-                <% if booking.status != "Annulé" %>
+                <% if booking.status != ("Annulé" || "Rejected") %>
                   <%= link_to "Annuler", cancel_booking_path(booking), class:"btn btn-secondary"%>
                 <% end %>
                 </div>
