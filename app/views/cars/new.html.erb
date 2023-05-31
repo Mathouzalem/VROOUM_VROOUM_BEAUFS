@@ -15,6 +15,8 @@
     <%= f.input :brand%>
     <%= f.input :modele%>
     <%= f.input :power%>
+    <%= f.input :name%>
+    <%= f.input :address, input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Create", class: "btn-grad"%>
   <% end %>
