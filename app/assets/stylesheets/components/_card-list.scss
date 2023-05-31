@@ -16,13 +16,41 @@
   margin-right: 20px;
 }
 
+.card-list-description{
+  display: flex;
+}
+
+.card-list-description-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+  text-decoration: none;
+  color: #312B2F;
+  font-weight: bold;
+  }
+
+  h5{
+    color: #312B2F;
+    overflow: hidden;
+    max-width: 700px;
+    max-height: 50px;
+  }
+
+  p{
+    font-style: italic;
+    color: #777;
+  }
+}
+
 .card-list-booking{
   height: 100%;
-  width: 20%;
+  width: 18%;
 }
 .fondmyindex {
   background-color: #DAD2CF;
   padding: 60px;
+  height: 100vh;
 }
 
 .h1myindex {
@@ -40,10 +68,20 @@
     background-size: 200% auto;
     color: white;
     border-radius: 10px;
+    text-decoration: none;
 }
+
 
 .btn-gradmyindex:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
+  text-decoration: none;
+}
+
+.p-status{
+  color: #777;
+}
+
+.card-list a {
   text-decoration: none;
 }
