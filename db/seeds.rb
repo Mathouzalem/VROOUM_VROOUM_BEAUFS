@@ -20,10 +20,10 @@ puts "Finished!"
 puts "Cleaning database..."
 Car.destroy_all
 puts "Creating cars..."
-car1 = { title: "Peugeot 308 flammes gros pots", description: "Des gros pots qui envoient du lourd", price: 20, user: galmier }
-car2 = { title: "Renault Clio 3", description: "Rabaissée au max, attention aux dos d'âne", price: 30, user: mathieu }
-car3 = { title: "Tesla fluo", description: "Plus électrique que Pikachu", price: 100, user: mathilde }
-car4 = { title: "Honda Civic", description: "Appartenue à Dominique Toreto, sièges baqués, confort au max, gros rouling", price: 50, user: alex }
+car1 = { title: "Peugeot 308 flammes gros pots", description: "Des gros pots qui envoient du lourd", price: 20, user: galmier, name: "Jacquemin Tunning", address: "72 rue des Sureaux, Sainghin-en-Mélantois" }
+car2 = { title: "Renault Clio 3", description: "Rabaissée au max, attention aux dos d'âne", price: 30, user: mathieu, name: "Tunning qui pète", address: "Place Bellecour, Lyon" }
+car3 = { title: "Tesla fluo", description: "Plus électrique que Pikachu", price: 100, user: mathilde, name: "Tunning Vroum", address: "17 place Paul Doumer, Bordeaux" }
+car4 = { title: "Honda Civic", description: "Appartenue à Dominique Toreto, sièges baqués, confort au max, gros rouling", price: 50, user: alex, name: "Quartier Nord TUNNING", address: "61 rue Marx Dormoy, Marseille" }
 
 [car1, car2, car3, car4].each do |attributes|
   car = Car.create!(attributes)
