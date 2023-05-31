@@ -8,6 +8,7 @@
   <p>Motorisation: <%= @car.motor %></p>
   <p>Carburant: <%=@car.fuel %></p>
   <p>Puissance DIN: <%= @car.power %>Ch</p>
+  <%= link_to "Add a Review", new_booking_review_path(booking_id: @booking.id) %>
 </div>
 
 

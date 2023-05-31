@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   resources :cars do
     resources :bookings, only: [:create, :update]
   end
-  resources :bookings, only: [:index, :show]
+
+  resources :bookings, only: [:index, :show] do
+    resources :reviews, only: [:new, :create]
+  end
   get "/mycars", to: "cars#my_index"
 
   get "/bookings/:id/canceled", to: "bookings#canceled", as: :cancel_booking
+  resources :reviews, only: [:index]
 end

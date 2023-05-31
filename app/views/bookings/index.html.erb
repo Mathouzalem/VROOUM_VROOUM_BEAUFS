@@ -2,14 +2,13 @@
 
 <div class="fondmyindex">
   <h1 class="h1myindex">Mes reservations</h1>
-
       <div class="card-list">
         <% @bookings.each do |booking| %>
             <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
             <div class="card-list-description">
               <h3><%= booking.car.title %></h3>
                 <p><%= booking.car.description %></p>
-                <p id="card-list-p"><%= booking.car.created_at%></p>
+                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id) %>
             </div>
             <div class="card-list-booking d-flex">
                 <div class= "card-list-booking-details">
