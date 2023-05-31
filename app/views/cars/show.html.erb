@@ -1,3 +1,4 @@
+
 <div class="fondshow">
   <h1 class="title-show"><%= @car.title %></h1>
   <div class="marge">
@@ -6,7 +7,7 @@
          <div class="parentshow">
             <div class="rondshow"></div>
             <%=image_tag("carpardefaut.png" , class:"img-show")%>
-          </div>
+            </div>
         </div>
       <div class="cardoshow">
       <div class="textshow">
@@ -22,4 +23,14 @@
     </div>
   </div>
   </div>
+</div>
+
+
+ <div class="select-date">
+            <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
+            <input type="text" data-flatpickr-target="date" data-action="change->flatpickr#setDates">
+            <%= f.input :start_date, label: "Réservation", as: :string, input_html: { data:{flatpickr_target:"startTime"}}%>
+            <%= f.input :end_date, as: :string, input_html: {  data:{flatpickr_target:"endTime"} }%>
+            <%= f.submit 'Réserver' %>
+            <% end %>
 </div>
