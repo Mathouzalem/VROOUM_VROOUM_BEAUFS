@@ -1,0 +1,49 @@
+.card-list{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  background-color: #efe5e2;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px
+}
+
+.img-card-list{
+  height: 150px;
+  background-color: #ffffff;
+  width: auto;
+  margin-right: 20px;
+}
+
+.card-list-booking{
+  height: 100%;
+  width: 20%;
+}
+.fondmyindex {
+  background-color: #DAD2CF;
+  padding: 60px;
+}
+
+.h1myindex {
+  color: #312B2F;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-gradmyindex {
+  background-image: linear-gradient(to right, #DC3C18 0%, #DC3C18 51%, #DC3C18 100%);
+    margin-top: -16px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-gradmyindex:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

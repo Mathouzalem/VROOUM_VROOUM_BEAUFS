@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "faker"
 puts "Cleaning database..."
+Booking.destroy_all
 User.destroy_all
-
 puts "Creating users..."
 mathilde = User.create!(first_name: "Mathilde", last_name: "bonhomme", email: "mathilde@mail.com", password: "123456")
 mathieu = User.create!(first_name: "Mathieu", last_name: "cozian", email: "mathieu@mail.com", password: "123456")
@@ -17,11 +18,10 @@ puts "Finished!"
 
 puts "Cleaning database..."
 Car.destroy_all
-
 puts "Creating cars..."
-car1 = { title: "Peugeot 308 flammes gros pots", description: "Des gros pots qui envoient du lourd", price: 20, user: galmier}
-car2 = { title: "Renault Clio 3", description: "Rabaissée au max, attention aux dos d'âne", price: 30, user: mathilde }
-car3 = { title: "Tesla fluo", description: "Plus électrique que Pikachu", price: 100, user: mathieu }
+car1 = { title: "Peugeot 308 flammes gros pots", description: "Des gros pots qui envoient du lourd", price: 20, user: galmier }
+car2 = { title: "Renault Clio 3", description: "Rabaissée au max, attention aux dos d'âne", price: 30, user: mathieu }
+car3 = { title: "Tesla fluo", description: "Plus électrique que Pikachu", price: 100, user: mathilde }
 car4 = { title: "Honda Civic", description: "Appartenue à Dominique Toreto, sièges baqués, confort au max, gros rouling", price: 50, user: alex }
 
 [car1, car2, car3, car4].each do |attributes|
@@ -29,3 +29,17 @@ car4 = { title: "Honda Civic", description: "Appartenue à Dominique Toreto, si�
   puts "Created #{car.title}"
 end
 puts "Finished!"
+
+puts "Bookings "
+puts "Cleaning Database"
+
+
+booking1 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: galmier, car:mathieu.cars.first}
+booking2 = { start_date: Faker::Date.backward, end_date: Faker::Date.forward, user: mathieu, car:galmier.cars.first}
+
+Booking.create(booking1)
+Booking.create(booking2)
+
+
+
+puts "booking created"
