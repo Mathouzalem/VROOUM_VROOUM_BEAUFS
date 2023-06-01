@@ -44,9 +44,9 @@
    <h1>Test</h1>
     <div class="container-review">
 
-    <% if @car.bookings.empty? %>
-        <h2>Pas de booking.</h2>
-    <% end %>
+      <% if @car.bookings.empty? %>
+          <h2>Pas de booking.</h2>
+      <% end %>
 
           <h1>Nos avis :</h1>
         <% @car.bookings.each do |booking| %>
