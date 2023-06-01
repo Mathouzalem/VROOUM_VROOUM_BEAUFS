@@ -2,6 +2,10 @@ class CarsController < ApplicationController
 
   def index
     @cars = Car.all
+    if params[:query].present?
+
+      @cars = @cars.where("address ILIKE ?", "%#{params[:query]}%")
+    end
     @markers = @cars.geocoded.map do |car|
       {
         lat: car.latitude,
@@ -14,6 +18,7 @@ class CarsController < ApplicationController
 
   def my_index
     @cars = Car.where(user_id: current_user.id)
+
   end
 
   def edit
