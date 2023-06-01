@@ -5,7 +5,6 @@
   <h1 class="titlenew">Ajouter une nouvelle tuture en location</h1>
   <hr>
 
-<div class="bgnewcar">
   <%= simple_form_for(@car) do |f| %>
     <%= f.input :title, label: "Titre de mon annonce"%>
     <%= f.input :description, label: "Description de mon annonce" %>
@@ -21,5 +20,4 @@
     <%= f.input :photo, as: :file %>
     <%= f.submit "Create", class: "btn-grad"%>
   <% end %>
-</div>
 </div>
