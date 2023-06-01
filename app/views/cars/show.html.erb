@@ -39,53 +39,47 @@
     </div>
   </div>
 </div>
-</div>
 <div>  <%# ////////////////////// REVIEW /////////////// %>
    <h1>Test</h1>
     <div class="container-review">
 
     <% if @car.bookings.empty? %>
-        <h2>Pas de booking.</h2>
-    <% end %>
-
-          <h1>Nos avis :</h1>
+        <h2 style = "color: white;">Pas de booking.</h2>
+        <% end  %>
         <% @car.bookings.each do |booking| %>
-          <% @review = booking.reviews.first  %>
+        <% @review = booking.reviews.first  %>
             <% if @review %>
             <%# REVIEW CARD %>
 
             <div class= "review-card">
               <%# USER %>
-
                     <div class= "review-card-user" >
                         <div class="d-flex">
                           <%= image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkO9S6n7ei4cm_etweQm8-kUO4lqWoeSsgDbAr2FLeIw&s") %>
 
-                          <div id="review-card-user-info">
-                                <h3><%= booking.user.first_name%><%= booking.user.last_name %></h3>
-                                <p><%= @review.rate %></p>
-                              </div>
-                          </div>
-                          <div class = "infos-location">
-                              <p>Début de location : <%= booking.start_date %></p>
-                              <p>Fin de location : <%= booking.end_date %></p>
-                          </div>
-                        </div>
-                          <hr style="color: #B6FF1C";>
-                            <div id="review-card-content">
-                            <p>Commentaire :</p>
-                                <p><%= @review.comment %></p>
-                            </div>
-                <%# CONTENT %>
-              <% else %>
-                <p> Pas encore d'avis, on attend le tiens chacal !!!!</p>
-              <% end %>
-
-          <%end  %>
-
-
-        <% end %>
-    </div>
-
+                           <div id="review-card-user-info">
+                <h3><%= booking.user.first_name %><%= booking.user.last_name %></h3>
+                <p><%= @review.rate %></p>
+              </div>
+            </div>
+            <div class="infos-location">
+              <p>Début de location : <%= booking.start_date %></p>
+              <p>Fin de location : <%= booking.end_date %></p>
+            </div>
+          </div>
+          <hr style="color: #B6FF1C";>
+          <div id="review-card-content">
+            <p>Commentaire :</p>
+            <p><%= @review.comment %></p>
+          </div>
+        </div>
+        <%# CONTENT %>
+      <% else %>
+        <p> Pas encore d'avis, on attend le tiens chacal !!!!</p>
+      <% end %>
+    <% end %>
   </div>
+</div>
+
+</div>
 </div>
