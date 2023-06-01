@@ -39,9 +39,10 @@
       </div>
     </div>
   </div>
+
 <div>
   <%# ////////////////////// REVIEW /////////////// %>
-  <h1>Test</h1>
+  <h1>Nos Avis</h1>
   <div class="container-review">
     <% if @car.bookings.any? { |booking| booking.reviews.exists? } %>
       <% @car.bookings.each do |booking| %>
@@ -59,6 +60,9 @@
               <div class="infos-location">
                 <p>Début de location : <%= booking.start_date %></p>
                 <p>Fin de location : <%= booking.end_date %></p>
+
+
+
               </div>
             </div>
             <hr style="color: #B6FF1C;">

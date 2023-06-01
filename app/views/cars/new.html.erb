@@ -1,23 +1,25 @@
-<div class="background" style="background-image: url(https://i.pinimg.com/originals/74/0e/3d/740e3d5a5302ee410cbde9209f44dad7.jpg)">
-</div>
+<div class="fondnew">
+  <div class="background" style="background-image: url(https://i.pinimg.com/originals/74/0e/3d/740e3d5a5302ee410cbde9209f44dad7.jpg)">
+  </div>
 
-<div class="containernew">
-  <h1 class="titlenew">Ajouter une nouvelle tuture en location</h1>
-  <hr>
+  <div class="containernew">
+    <h1 class="titlenew">Ajouter une nouvelle pépite tunnée</h1>
+    <hr>
 
-  <%= simple_form_for(@car) do |f| %>
-    <%= f.input :title, label: "Titre de mon annonce"%>
-    <%= f.input :description, label: "Description de mon annonce" %>
-    <%= f.input :price, label: "Prix (par jour)" %>
-    <%= f.input :motor, label: "Moteur"%>
-    <%= f.input :fuel, label: "Carburant" %>
-    <%= f.input :year, label: "Année de mise en circulation"%>
-    <%= f.input :brand, label: "Marque"%>
-    <%= f.input :modele, label: "Modèle"%>
-    <%= f.input :power, label: "Puissance"%>
-    <%= f.input :address, label: "Localisation de ma voiture", input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
-    <%= f.input :name, label: "Nom de ma localisation"%>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Create", class: "btn-grad"%>
-  <% end %>
+    <%= simple_form_for(@car) do |f| %>
+      <%= f.input :title, label: "Titre de mon annonce"%>
+      <%= f.input :description, label: "Description de mon annonce" %>
+      <%= f.input :price, label: "Prix (par jour)" %>
+      <%= f.input :motor, label: "Moteur"%>
+      <%= f.input :fuel, label: "Carburant" %>
+      <%= f.input :year, label: "Année de mise en circulation"%>
+      <%= f.input :brand, label: "Marque"%>
+      <%= f.input :modele, label: "Modèle"%>
+      <%= f.input :power, label: "Puissance"%>
+      <%= f.input :address, label: "Localisation de ma voiture", input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+      <%= f.input :name, label: "Nom de ma localisation"%>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Créer", class: "btn-gradnew"%>
+    <% end %>
+  </div>
 </div>
