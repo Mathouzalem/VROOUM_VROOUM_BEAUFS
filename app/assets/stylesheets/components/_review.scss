@@ -1,6 +1,6 @@
 .container-review{
   p{
-    color: black
+    color: white
   }
   margin-left: 50px;
   margin-right: 200px;
@@ -32,7 +32,7 @@
 #review-card-user-info{
   display: flex;
   flex-direction: column;
-
+  color: white;
   h3{
     margin-left: 10px;
     align-content: flex-start;
@@ -52,6 +52,7 @@
 }
 
 #review-card-content{
+  color: white;
   margin-left: 100px;
   display: flex;
   margin-right: 200px;
