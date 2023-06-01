@@ -55,6 +55,26 @@ $vert: #B6FF1C;
   color: #4e4b4b;
   text-decoration: none;
 }
+
+.mapboxgl-ctrl-geocoder >input{
+  color: white;
+}
+
+// TODO: css de l'input localisation
+.font-w{
+  background-color: black !important;
+  color: white;
+}
+
+// .font-w:focus{
+//   color: white;
+// }
+// .font-w:empty{
+//   color: gray;
+// }
+
+
+
 // /* For tablets: */
 // @media screen and (min-width: 600px) {
 //   .container {

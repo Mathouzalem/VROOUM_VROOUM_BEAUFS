@@ -43,7 +43,7 @@
   <%# ////////////////////// REVIEW /////////////// %>
   <h1>Nos Avis</h1>
   <div class="container-review">
-    <% if @car.bookings.any? { |booking| booking.reviews.exists? } %>
+     <% if @car.bookings.any? { |booking| booking.reviews.exists? } %>
       <% @car.bookings.each do |booking| %>
         <% if booking.reviews.exists? %>
           <% review = booking.reviews.first %>
@@ -59,9 +59,6 @@
               <div class="infos-location">
                 <p>Début de location : <%= booking.start_date %></p>
                 <p>Fin de location : <%= booking.end_date %></p>
-
-
-
               </div>
             </div>
             <hr style="color: #B6FF1C;">
@@ -73,7 +70,7 @@
         <% end %>
       <% end %>
     <% else %>
-      <p>Pas encore d'avis, on attend le tien chacal !!!!</p>
+       <p>Pas encore d'avis, on attend le tien chacal !!!!</p>
     <% end %>
   </div>
 
