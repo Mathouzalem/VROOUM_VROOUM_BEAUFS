@@ -1,26 +1,19 @@
-.select-date {
-  background-color: grey;
-  height: 300px;
-  width: 300px;
-}
-
 .fondshow {
-  background-color: #312B2F;
+  background-color: #000000;
   padding-bottom: 20px;
-  height: 100vh;
 }
 
 .title-show {
-  color: #DAD2CF;
-  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-family: 'Faster One', cursive;
   font-size: 60px;
-  margin-left: 123PX;
+  margin-left: 123px;
 }
 
 .price-show{
   margin-left: 123px;
   font-size: 30px;
-  color: #DAD2CF;
+  color: #ffffff;
 }
 
 .price-day-show{
@@ -29,11 +22,10 @@
 }
 
 .description-show {
-  color: #DAD2CF;
-  font-family: 'Playfair Display', serif;
+  color: #ffffff;
   margin-left: 123PX;
   font-style: italic;
-  height: 150px;
+  height: 50px;
 }
 
 .marge {
@@ -46,7 +38,8 @@
     height: 150%;
     top: 50px;
     left: 70px;
-    background: #443e42;
+    background: #000000;
+    border: 1px solid #ffffff;
     border-radius: 300% / 300%;
 }
 
@@ -67,9 +60,10 @@
 
 .textshow {
   margin-left: 123px;
-  color: #DAD2CF;
+  color: #ffffff;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
 }
 
 .textshow > p {
@@ -79,41 +73,40 @@
 
 
 .btn-gradshow {
-  background-image: linear-gradient(to right, #DC3C18 0%, #DC3C18 51%, #DC3C18  100%);
-  margin-top: 70px;
+  background-color: #FF772B;
+  margin-top: 40px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: 30px;
   text-decoration: none;
+  border: 0px !important;
 }
 
 .btn-gradshow:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: #4e4b4b;
   text-decoration: none;
 }
 
 .btn-gradshowback {
-  background-image: linear-gradient(to right, #443e42 0%, #443e42 51%, #443e42  100%);
-  margin-left: 20px;
+  background-color: #B6FF1C;
+  margin-top: 40px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
   text-decoration: none;
 }
 
 .btn-gradshowback:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+    color: #4e4b4b;
+    text-decoration: none;
 }
 
 .cardsshow {
@@ -131,14 +124,16 @@
   padding: 10px;
   border-radius: 10px;
   margin-left: 123px;
+  margin-right: 65px;
   margin-top: 10px;
   text-align: center;
-  background-color: #443e42;
+  background-color: #000000;
   height: 260px;
+  border: 1px solid #ffffff;
 }
 
 .p-form-show{
-  color: #DAD2CF;
+  color: #ffffff;
   font-size: 18px;
 }
 

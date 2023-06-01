@@ -2,6 +2,24 @@
   <h1 class="title-cards">Les grosses carettes tunées bien fraîches chacal</h1>
 
 <div class="container">
+
+    <div class="row justify-content-center m-2">
+      <div class="col-sm-8 my-3">
+        <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Choisis la ville où tu veux rider chacal"
+            %>
+          <%= submit_tag "Search", address: "", class: "btn btn-secondary" %>
+        <% end %>
+      </div>
+    </div>
+
+<% if @cars.first == nil %>
+<p class="p-nocar" >Pas de voitures disponible dans cette ville</p>
+<% end %>
+
   <div class="cards">
     <% @cars.each do |car| %>
       <%= link_to(car_path(car)) do %>
@@ -28,3 +46,14 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+
+
+
+
+<%# <select class="form-control form-control-lg">
+  <option>Toutes les voitures</option>
+  <%= @cars.each do |car| %>
+<%# <option > <%= car.name</option> %>
+<%# <% end %>
+<%# </select> %>

@@ -5,8 +5,17 @@
 @import "show-car";
 @import "new_car";
 
+$orange: #FF772B;
+$vert: #B6FF1C;
 
 .link_to{
   text-decoration: none;
 
+}
+
+.p-nocar{
+  color: white;
+  font-style: italic;
+  margin-left: 50px;
+  margin-top: 20px;
 }

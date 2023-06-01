@@ -1,24 +1,48 @@
+$orange: #FF772B;
+$vert: #B6FF1C;
+
 .container-css {
-  margin: 0, auto;
+  background-color: black;
+  color:white;
+  padding-top:1em;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  margin: 0, auto;
 }
 
-/* For tablets: */
-@media screen and (min-width: 600px) {
-  .container {
-    width: 75%; /* take 75% of the screen width */
-    max-width: 750px; /* maximum width is 750px */
-  }
+.form-card {
+  margin: 0 auto !important;
+  width: 600px;
+  padding-bottom:20px;
 }
-/* For desktop: */
-@media screen and (min-width: 900px) {
-  .container {
-    width: 70%; /* take 70% of the screen width */
-    max-width: 960px; /* maximum width is 960px */
-  }
+.btn-update{
+  background-color: $orange !important ;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  border: 0px !important;
+  transition: all .2s ease-in-out;
 }
+
+.btn-update:hover{
+  transform: scale(1.13)
+}
+
+// /* For tablets: */
+// @media screen and (min-width: 600px) {
+//   .container {
+//     width: 75%; /* take 75% of the screen width */
+//     max-width: 750px; /* maximum width is 750px */
+//   }
+// }
+// /* For desktop: */
+// @media screen and (min-width: 900px) {
+//   .container {
+//     width: 70%; /* take 70% of the screen width */
+//     max-width: 960px; /* maximum width is 960px */
+//   }
+// }
 
 
 
