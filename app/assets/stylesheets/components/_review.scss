@@ -1,0 +1,61 @@
+.container-review{
+  p{
+    color: white
+  }
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.review-card{
+  padding-top: 10px;
+  border: solid 1px white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.review-card-user{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  img{
+    display: flex;
+    justify-content: flex-start;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius:50%;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+#review-card-user-info{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  h3{
+    margin-left: 10px;
+    align-content: flex-start;
+    margin-top: 10px;
+    font-family: "Faster One", cursive;
+  }
+  p{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}
+
+#info-location{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#review-card-content{
+  color: white;
+  margin-left: 100px;
+  display: flex;
+  margin-right: 200px;
+  p{
+    margin-left: 20px;
+  }
+}

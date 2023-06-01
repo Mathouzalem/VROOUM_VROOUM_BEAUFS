@@ -29,6 +29,32 @@ $vert: #B6FF1C;
   transform: scale(1.13)
 }
 
+.gif {
+  width: 553px;
+  height: 450px;
+  border-radius: 30px;
+  margin-left: 450px;
+  margin-bottom: 20px;
+}
+
+.btn-gradnew {
+  background-color: #B6FF1C;
+  margin-top: 6px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  text-decoration: none;
+  border: 0px !important;
+}
+
+.btn-gradnew:hover {
+  color: #4e4b4b;
+  text-decoration: none;
+}
 // /* For tablets: */
 // @media screen and (min-width: 600px) {
 //   .container {
