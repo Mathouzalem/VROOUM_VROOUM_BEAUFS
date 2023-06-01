@@ -1,12 +1,12 @@
 // Specific CSS for your home-page
 .fond {
-  background-color: #312B2F;
+  background-color: #000000;
   padding-bottom: 200px;
 }
 
 .title-home {
-  color: #DAD2CF;
-  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-family: 'Faster One', cursive;
   font-size: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -20,7 +20,8 @@
   height: 170%;
   top: 0;
   left: -400px;
-  background: #DAD2CF;
+  background: #000000;
+  border: 1px solid #ffffff;
   border-radius: 600px / 550px;
 }
 
@@ -40,7 +41,7 @@
 
 .texthp {
   margin: 123px;
-  color: #DAD2CF;
+  color: #ffffff;
 }
 
 .texthp > p {
@@ -50,20 +51,20 @@
 
 
 .btn-grad {
-  background-image: linear-gradient(to right, #DC3C18 0%, #DC3C18 51%, #DC3C18  100%);
+  background-color: #B6FF1C;
   margin-top: 40px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  text-decoration: none;
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: #4e4b4b;
   text-decoration: none;
 }
 
