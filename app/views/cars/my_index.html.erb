@@ -1,7 +1,7 @@
 <div class="fondmyindex">
   <div class="d-flex align-items-center justify-content-between">
     <h1 class="h1myindex">Mes annonces</h1>
-    <%= link_to "Nouvelle annonce", new_car_path, class: "btn-gradmyindex " %>
+    <%= link_to "Nouvelle annonce", new_car_path, class: "btn-gradmyindex2 " %>
     </div>
     <% @cars.each do |car| %>
   <div class="card-list">
@@ -24,8 +24,8 @@
                   <p>Pas de location</p>
                 <% end %>
               </div>
-              <%= link_to "Mes demandes", car_mes_demandes_path(car),class:"btn btn-primary m-2" %>
-              <%= link_to "Supprimer", car_path(car), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sur de supprimer l'annonce?"}, class:"btn btn-secondary m-2" %>
+              <%= link_to "Mes demandes", car_mes_demandes_path(car),class:"btn-gradshowmy" %>
+              <%= link_to "Supprimer", car_path(car), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sur de supprimer l'annonce?"}, class:"btn-gradshowmyg" %>
             </div>
         </div>
       <% end %>

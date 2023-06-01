@@ -44,12 +44,12 @@
     <div class="container-review">
 
 
-     
+
 
           <h1>Nos avis :</h1>
 
     <% if @car.bookings.empty? %>
-        <h2 style = "color: white;">Pas de booking.</h2>
+        <h6 style = "color: white; margin-left: 675px;">Pas de booking.</h6>
         <% end  %>
 
         <% @car.bookings.each do |booking| %>
