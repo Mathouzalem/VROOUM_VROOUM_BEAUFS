@@ -4,21 +4,27 @@
   <h1 class="h1myindex">Mes reservations</h1>
       <div class="card-list">
         <% @bookings.each do |booking| %>
-            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
             <div class="card-list-description">
-              <h3><%= booking.car.title %></h3>
+            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
+            <div class="card-list-description-2">
+              <div>
+                <h3><%= booking.car.title %></h3>
                 <p><%= booking.car.description %></p>
-                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id) %>
+              </div>
+                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id),class:"btn btn-secondary" %>
             </div>
-            <div class="card-list-booking d-flex">
+          </div>
+            <div class="card-list-booking-2 d-flex">
                 <div class= "card-list-booking-details">
-                  <p class="booking-date">Start date :<%= booking.start_date %></p>
-                  <p class="booking-date">End Date : <%= booking.end_date %></p>
+                  <p class="booking-date"> <strong>Location du :</strong></p>
+                  <p class="booking-date-2"><%= booking.start_date %></p>
+                  <p class="booking-date"> <strong>Au :</strong></p>
+                  <p class="booking-date-2"><%= booking.end_date %></p>
                 </div>
                 <div class="card-list-status">
-                <p>Status : <%= booking.status %></p>
-                <% if booking.status != "Annulé" %>
-                  <%= link_to "Annuler", cancel_booking_path(booking)%>
+                <p class="p-status"> <strong>Statut: </strong><%= booking.status %></p>
+                <% if booking.status != ("Annulé" || "Rejected") %>
+                  <%= link_to "Annuler", cancel_booking_path(booking), class:"btn btn-secondary"%>
                 <% end %>
                 </div>
             </div>
