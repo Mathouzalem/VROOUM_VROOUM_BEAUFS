@@ -39,18 +39,43 @@
     </div>
   </div>
 
-        <h3>Avis: </h3>
+   <%# ////////////////////// REVIEW /////////////// %>
+    <div class="container-review">
 
         <% @car.bookings.each do |booking| %>
           <% @review = booking.reviews.first  %>
             <% if @review %>
-              <div class="review-card">
-                  <%= @review.comment %>
-                  <%= @review.rate %>
-              </div>
+
+
+            <%# REVIEW CARD %>
+            <h1>Nos avis</h1>
+            <div class= "review-card">
+              <%# USER %>
+
+                    <div class= "review-card-user" >
+                        <div class="d-flex">
+                          <%= image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkO9S6n7ei4cm_etweQm8-kUO4lqWoeSsgDbAr2FLeIw&s") %>
+
+                          <div id="review-card-user-info">
+                                <h3><%= booking.user.first_name%><%= booking.user.last_name %></h3>
+                                <p><%= @review.rate %></p>
+                              </div>
+                          </div>
+                          <div class = "infos-location">
+                              <p>début de location : <%= booking.start_date %></p>
+                              <p>Fin de location : <%= booking.end_date %></p>
+                          </div>
+                        </div>
+                          <hr style="color: white";>
+                            <div id="review-card-content">
+                            <h5>Commentaire :</h5>
+                                <p><%= @review.comment %></p>
+                            </div>
+                <%# CONTENT %>
               <% else %>
                 <p> Pas d'avis</p>
               <% end %>
+
         <% end %>
   </div>
 </div>
