@@ -22,7 +22,9 @@
         <p>Carburant: <%=@car.fuel %></p>
         <p>Puissance DIN: <%= @car.power %>Ch</p>
       </div>
-      <% if @car.user_id != current_user.id %>
+
+      <%  %>
+      <% if @car.user != current_user %>
         <div class="select-date">
                           <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
                           <p class="p-form-show"> Reservez votre véhicule</p>
@@ -39,14 +41,18 @@
   </div>
     <div>
         <h3>Avis: </h3>
+
         <% @car.bookings.each do |booking| %>
           <% @review = booking.reviews.first  %>
-          <div class="review-card">
-              <%= @review.comment %>
-              <%= @review.rate %>
-          </div>
-          <% end %>
+            <% if @review %>
+              <div class="review-card">
+                  <%= @review.comment %>
+                  <%= @review.rate %>
+              </div>
+              <% else %>
+                <p> Pas d'avis</p>
+              <% end %>
+        <% end %>
     </div>
   </div>
 </div>
-<%= console %>

@@ -2,8 +2,8 @@
 
 <div class="fondmyindex">
   <h1 class="h1myindex">Mes reservations</h1>
-      <div class="card-list">
-        <% @bookings.each do |booking| %>
+      <% @bookings.each do |booking| %>
+       <div class="card-list">
             <div class="card-list-description">
             <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
             <div class="card-list-description-2">
@@ -28,6 +28,6 @@
                 <% end %>
                 </div>
             </div>
-        <% end %>
     </div>
+        <% end %>
 </div>
