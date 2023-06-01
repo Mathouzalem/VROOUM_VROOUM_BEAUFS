@@ -1,17 +1,17 @@
 
 
 <div class="fondmyindex">
-  <h1 class="h1myindex">Mes reservations</h1>
+  <h1 class="h1myindex">Mes réservations</h1>
       <% @bookings.each do |booking| %>
        <div class="card-list">
             <div class="card-list-description">
-            <%= image_tag "#{booking.car.photo}", class:"img-card-list" %>
+            <%= image_tag "carpardefaut.png", class:"img-card-list" %>
             <div class="card-list-description-2">
               <div>
                 <h3><%= booking.car.title %></h3>
                 <p><%= booking.car.description %></p>
               </div>
-                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id),class:"btn btn-secondary" %>
+                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id),class:"btn-gradmyindex" %>
             </div>
           </div>
             <div class="card-list-booking-2 d-flex">
@@ -23,10 +23,10 @@
                 </div>
                 <div class="card-list-status">
                 <p class="p-status"> <strong>Statut: </strong><%= booking.status %></p>
-                <% if booking.status != ("Annulé" || "Rejected") %>
-                  <%= link_to "Annuler", cancel_booking_path(booking), class:"btn btn-secondary"%>
-                <% end %>
                 </div>
+                <% if booking.status != ("Annulé" || "Rejected") %>
+                  <%= link_to "Annuler", cancel_booking_path(booking), class:"btn-annuler"%>
+                <% end %>
             </div>
     </div>
         <% end %>
