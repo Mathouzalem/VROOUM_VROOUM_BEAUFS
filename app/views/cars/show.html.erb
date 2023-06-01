@@ -41,14 +41,14 @@
 
    <%# ////////////////////// REVIEW /////////////// %>
     <div class="container-review">
-
+          <h1>Nos avis :</h1>
         <% @car.bookings.each do |booking| %>
           <% @review = booking.reviews.first  %>
             <% if @review %>
 
 
             <%# REVIEW CARD %>
-            <h1>Nos avis</h1>
+
             <div class= "review-card">
               <%# USER %>
 
@@ -62,20 +62,21 @@
                               </div>
                           </div>
                           <div class = "infos-location">
-                              <p>début de location : <%= booking.start_date %></p>
+                              <p>Début de location : <%= booking.start_date %></p>
                               <p>Fin de location : <%= booking.end_date %></p>
                           </div>
                         </div>
-                          <hr style="color: white";>
+                          <hr style="color: #B6FF1C";>
                             <div id="review-card-content">
-                            <h5>Commentaire :</h5>
+                            <p>Commentaire :</p>
                                 <p><%= @review.comment %></p>
                             </div>
                 <%# CONTENT %>
               <% else %>
-                <p> Pas d'avis</p>
+                <p> Pas encore d'avis, on attend le tiens chacal !!!!</p>
               <% end %>
 
         <% end %>
+    </div>
   </div>
 </div>
