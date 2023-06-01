@@ -38,17 +38,18 @@
       </div>
     </div>
   </div>
-
-   <%# ////////////////////// REVIEW /////////////// %>
-    <div class="container-review">
-
+</div>
+</div>
+<div>  <%# ////////////////////// REVIEW /////////////// %>
+   <h1>Test</h1>
+    <div class="container-review"
+    <% if @car.bookings.empty? %>
+        <h2>Pas de booking.</h2>
+    <% end %>
         <% @car.bookings.each do |booking| %>
           <% @review = booking.reviews.first  %>
             <% if @review %>
-
-
             <%# REVIEW CARD %>
-            <h1>Nos avis</h1>
             <div class= "review-card">
               <%# USER %>
 
@@ -75,7 +76,6 @@
               <% else %>
                 <p> Pas d'avis</p>
               <% end %>
-
-        <% end %>
+          <%end  %>
   </div>
 </div>
