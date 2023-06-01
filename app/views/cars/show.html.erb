@@ -1,7 +1,7 @@
 
 <div class="fondshow">
-  <div class="pt-3">
-    <%= link_to "Retour", cars_path, class:"btn-gradshowback pt-2"%>
+  <div class="pt-4">
+    <%= link_to "Retour", cars_path, class:"btn-gradshowback"%>
   </div>
   <div class="marge">
    <div class="cardsshow">
@@ -15,19 +15,11 @@
         <h1 class="title-show"><%= @car.title %></h1>
         <p class="price-show"><%= @car.price %> € <span class="price-day-show"> par jour</span></p>
         <p class="description-show"> <%= @car.description %></p>
-      <div class="textshow">
-        <p>Marque: <%= @car.brand %></p>
-        <p>Modèle: <%= @car.modele %></p>
-        <p>Motorisation: <%= @car.motor %></p>
-        <p>Carburant: <%=@car.fuel %></p>
-        <p>Puissance DIN: <%= @car.power %>Ch</p>
-      </div>
 
-      <%  %>
       <% if @car.user != current_user %>
         <div class="select-date">
                           <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
-                          <p class="p-form-show"> Reservez votre véhicule</p>
+                          <p class="p-form-show"> Réservez votre véhicule</p>
                           <input type="text" data-flatpickr-target="date" data-action="change->flatpickr#setDates", placeholder="Choisir mes dates">
                           <%= f.input :start_date, as: :string,as: :hidden, input_html: { data:{flatpickr_target:"startTime"}}%>
                           <%= f.input :end_date, as: :string,as: :hidden, input_html: {  data:{flatpickr_target:"endTime"} }%>
@@ -37,9 +29,16 @@
       <% else %>
         <%= link_to "Modifier mon annonce", edit_car_path(@car), class: "btn-gradshow btn-show" %>
       <% end %>
+      <div class="textshow">
+        <p>Marque: <%= @car.brand %></p>
+        <p>Modèle: <%= @car.modele %></p>
+        <p>Motorisation: <%= @car.motor %></p>
+        <p>Carburant: <%=@car.fuel %></p>
+        <p>Puissance DIN: <%= @car.power %>Ch</p>
+      </div>
     </div>
   </div>
-    <div>
+
         <h3>Avis: </h3>
 
         <% @car.bookings.each do |booking| %>
@@ -53,6 +52,5 @@
                 <p> Pas d'avis</p>
               <% end %>
         <% end %>
-    </div>
   </div>
 </div>
