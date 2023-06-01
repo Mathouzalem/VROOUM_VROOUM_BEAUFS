@@ -43,9 +43,15 @@
    <h1>Test</h1>
     <div class="container-review">
 
+
+     
+
+          <h1>Nos avis :</h1>
+
     <% if @car.bookings.empty? %>
         <h2 style = "color: white;">Pas de booking.</h2>
         <% end  %>
+
         <% @car.bookings.each do |booking| %>
         <% @review = booking.reviews.first  %>
             <% if @review %>
