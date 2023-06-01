@@ -1,5 +1,10 @@
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :comment %>
-  <%= f.input :rate %>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div class= "container-css">
+  <div class="form-card">
+    <%= simple_form_for [@booking, @review] do |f| %>
+      <%= f.input :comment, label: "Décrivez vos sensations après avoir fait vos gros wheeling dans votre pépite tunée" %>
+      <%= f.input :rate, label: "Notez vos sensations et faites pas le radin chacal /10" %>
+      <%= f.submit "Envoyer", class: "btn-gradnew" %>
+    <% end %>
+  </div>
+  <%=image_tag("gif.gif" , class: "gif")%>
+</div>

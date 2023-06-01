@@ -2,16 +2,16 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
-  background-color: #efe5e2;
-  border-radius: 4px;
+  border: solid 1px white;
+  background-color: #000000;
+  border-radius: 30px;
   padding: 10px;
   margin: 10px
 }
 
 .img-card-list{
   height: 150px;
-  background-color: #ffffff;
+  background-color: #000000;
   width: auto;
   margin-right: 20px;
 }
@@ -26,12 +26,12 @@
   justify-content: space-between;
   h3 {
   text-decoration: none;
-  color: #312B2F;
+  color: #ffffff;
   font-weight: bold;
   }
 
   h5{
-    color: #312B2F;
+    color: #ffffff;
     overflow: hidden;
     max-width: 700px;
     max-height: 50px;
@@ -39,7 +39,7 @@
 
   p{
     font-style: italic;
-    color: #777;
+    color: #ffffff;
   }
 }
 
@@ -57,27 +57,31 @@
   width: 29%;
 }
 .fondmyindex {
-  background-color: #DAD2CF;
+  background-color: #000000;
   padding: 60px;
   height: 100vh;
 }
 
 .h1myindex {
-  color: #312B2F;
-  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  padding-left: 20px;
+  font-family: 'Faster One', cursive;
 }
 
 .btn-gradmyindex {
-  background-image: linear-gradient(to right, #DC3C18 0%, #DC3C18 51%, #DC3C18 100%);
-    margin-top: -16px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
+  background-color: #FF772B;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 0px !important;
+  width: 188px;
 }
 
 
@@ -87,8 +91,31 @@
   text-decoration: none;
 }
 
+.btn-annuler {
+  background-color: #B6FF1C;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 0px !important;
+  width: 219px;
+  height: 56px;
+}
+
+.btn-annuler:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 .p-status{
-  color: #777;
+  color: #ffffff;
   margin: 3px;
 }
 
@@ -98,10 +125,10 @@
 
 .booking-date {
   margin: 3px;
-  color:#312B2F;
+  color:#ffffff;
 }
 
 .booking-date-2 {
   margin: 3px;
-  color: #777;
+  color: #ffffff;
 }
