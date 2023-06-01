@@ -1,15 +1,17 @@
 .navbar-lewagon {
   position: sticky;
+  top: 0;
   justify-content: space-between;
-  background: #312B2F;
-  color: #DAD2CF;
-  border-bottom: solid #DAD2CF;
+  background: #000000;
+  color: #ffffff;
+  border-bottom: solid #ffffff;
   a {
-    color: #DAD2CF;
-    padding-top: 4px;
+    color: #ffffff;
+    background-color: #000000;
   }
   a:hover {
-    color: #DC3C18;
+    color: #FF772B;
+    background-color: #000000;
   }
 }
 
