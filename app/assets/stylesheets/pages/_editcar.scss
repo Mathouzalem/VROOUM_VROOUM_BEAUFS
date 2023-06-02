@@ -61,8 +61,7 @@ $vert: #B6FF1C;
 }
 
 // TODO: css de l'input localisation
-.font-w{
-  background-color: black !important;
+.mapboxgl-ctrl-geocoder > input:focus {
   color: white;
 }
 
