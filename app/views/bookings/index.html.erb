@@ -5,13 +5,13 @@
       <% @bookings.each do |booking| %>
        <div class="card-list">
             <div class="card-list-description">
-            <%= image_tag "carpardefaut.png", class:"img-card-list" %>
+            <%= cl_image_tag booking.car.photo.key, class:"img-card-list" %>
             <div class="card-list-description-2">
               <div>
                 <h3><%= booking.car.title %></h3>
                 <p><%= booking.car.description %></p>
               </div>
-                <%= link_to "Add a Review", new_booking_review_path(booking_id: booking.id),class:"btn-gradmyindex" %>
+                <%= link_to "Ajouter un avis", new_booking_review_path(booking_id: booking.id),class:"btn-gradmyindex" %>
             </div>
           </div>
             <div class="card-list-booking-2 ">
@@ -29,6 +29,11 @@
                       <%= link_to "Annuler", cancel_booking_path(booking), class:"btn-annuler"%>
                     <% end %>
                 </div>
+
+                <% if booking.status != ("Annulé" || "Rejecté") %>
+                  <%= link_to "Annuler", cancel_booking_path(booking), class:"btn-annuler"%>
+                <% end %>
+
             </div>
     </div>
         <% end %>

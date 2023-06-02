@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-            <p class="pnav" style="margi : 0; ">Bonjour <%= current_user.first_name%></p>
+            <p class="pnav" style="margi : 0; ">Bonjour chacal <%= current_user.first_name%></p>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= image_tag "https://st.depositphotos.com/2218212/2938/i/600/depositphotos_29387653-stock-photo-facebook-profile.jpg", class: "avatar", alt: "dropdown menu" %>
@@ -15,7 +15,6 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mes annonces", "/mycars", class: "dropdown-item" %>
               <%= link_to "Mes réservations", "/bookings", class: "dropdown-item" %>
-              <%= link_to "Mes messages", "#", class: "dropdown-item" %>
               <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
