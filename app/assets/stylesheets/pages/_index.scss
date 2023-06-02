@@ -18,3 +18,7 @@
   margin-left: 50px;
   margin-top: 20px;
 }
+
+.mappy .mapboxgl-ctrl-geocoder > input:focus {
+  color:black;
+}
