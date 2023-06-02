@@ -1,41 +1,32 @@
 <%# TODO: Check le css !! %>
 
-<%= @car.title %>
-<% @car.bookings.each do |booking| %>
 
-<div class="bookings">
-  <div class="booking">
-        <div class="booking-info">
-          <div class="booking-info-title">
-            <%= booking.user.first_name %>
-          </div>
-          <div class="booking-info-details">
-            <%= booking.start_date.strftime('%l:%M %p') %> - <%= booking.end_date.strftime('%l:%M %p') %>
-          </div>
-        </div>
+<div class="fond-cards">
+<div class="container">
+  <h1 id ="booking-title"><%= @car.title %></h1>
+    <% @car.bookings.each do |booking| %>
+  <div class="booking-card">
+      <div class="booking-card-title">
+        <h5><strong><%= booking.user.first_name %></strong></h5>
+        <p><%= booking.start_date.strftime('%l:%M %p') %> - <%= booking.end_date.strftime('%l:%M %p') %></p>
       </div>
-  <div class="booking-actions">
-    <% if booking.status == "En attente" %>
-
-    <div class="d-flex">
-      <%= simple_form_for booking do |f| %>
-        <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-        <%= f.submit 'Accepter', class: 'btn btn-info' %>
-      <% end %>
-
-      <%= simple_form_for booking do |f| %>
-        <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-        <%= f.submit 'Rejecter', class: 'btn btn-light' %>
-      <% end %>
-    </div>
-
-  <% else %>
-    <%= booking.status %>
-
-  <% end %>
+      <div class="booking-actions">
+        <% if booking.status == "En Attente" %>
+          <div class="d-flex">
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+              <%= f.submit 'Accepter', class: 'btn btn-info' %>
+            <% end %>
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+              <%= f.submit 'Rejecter', class: 'btn btn-light' %>
+            <% end %>
+          </div>
+        <% else %>
+          <%= booking.status %>
+        <% end %>
+      </div>
   </div>
-
-
-
-  <%end %>
+    <% end %>
+  </div>
 </div>

@@ -3,7 +3,7 @@
 
 <div class="container">
 
-    <div class="row justify-content-center m-2">
+    <div class="row justify-content-center m-2 " data-sort-target="apear">
       <div class="col-sm-8 my-3">
         <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
@@ -11,14 +11,14 @@
                 class: "form-control",
                 placeholder: "Choisis la ville où tu veux rider chacal"
             %>
-          <%= submit_tag "Search", address: "", class: "btn-gradshow" %>
+          <%= submit_tag "Rechercher", address: "", class: "btn-gradshow-2" %>
         <% end %>
       </div>
     </div>
 
-<% if @cars.first == nil %>
-<p class="p-nocar" >Pas de voitures disponible dans cette ville</p>
-<% end %>
+    <% if @cars.first == nil %>
+      <p class="p-nocar" >Pas de voitures disponible dans cette ville</p>
+    <% end %>
 
   <div class="cards">
     <% @cars.each do |car| %>
