@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
       @booking.save
       redirect_to car_path(@car)
     else
-      render :new, :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
