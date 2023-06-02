@@ -7,7 +7,7 @@
       <div class="cardoshow">
         <div class="parentshow">
           <div class="rondshow"></div>
-          <%= image_tag("carpardefaut.png", class: "img-show") %>
+          <%= cl_image_tag @car.photo.key, class: "img-show" %>
         </div>
       </div>
       <div class="cardoshow">

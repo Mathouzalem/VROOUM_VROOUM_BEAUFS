@@ -24,7 +24,8 @@
     <% @cars.each do |car| %>
       <%= link_to(car_path(car)) do %>
         <div class="cardo">
-          <%=image_tag("carsfondblanc.jpg")%>
+        <%= cl_image_tag car.photo.key if car.photo %>
+          <%# <%=image_tag("carsfondblanc.jpg")%>
           <div class="content-cards">
           <div class="title-descrition-cardo">
               <h5> <strong><%=car.title%></strong></h5>
@@ -46,9 +47,6 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-
-
 
 
 <%# <select class="form-control form-control-lg">
