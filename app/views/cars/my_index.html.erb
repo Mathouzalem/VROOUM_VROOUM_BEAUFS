@@ -7,7 +7,7 @@
   <div class="card-list">
       <%= link_to(car_path(car)) do %>
           <div class="card-list-description">
-            <%= image_tag("carpardefaut.png" , class: "img-card-list") %>
+            <%= cl_image_tag car.photo.key, class: "img-card-list" if car.photo  %>
               <div class="card-list-description-2">
                 <div>
                   <h3> <%= car.title %></h3>
