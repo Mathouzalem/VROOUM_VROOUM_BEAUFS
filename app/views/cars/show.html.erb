@@ -18,7 +18,7 @@
         <% if @car.user != current_user %>
           <div class="select-date">
             <%= simple_form_for [@car, @booking], data: { controller: 'flatpickr' } do |f| %>
-              <p class="p-form-show">Réservez votre véhicule</p>
+              <p class="p-form-show">Réservez votre véhicule de bg</p>
               <input type="text" data-flatpickr-target="date" data-action="change->flatpickr#setDates" placeholder="Choisir mes dates">
               <%= f.input :start_date, as: :string, as: :hidden, input_html: { data: { flatpickr_target: "startTime" } } %>
               <%= f.input :end_date, as: :string, as: :hidden, input_html: { data: { flatpickr_target: "endTime" } } %>
