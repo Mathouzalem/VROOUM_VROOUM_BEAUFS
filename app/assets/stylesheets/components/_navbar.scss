@@ -28,3 +28,8 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.dropdown-menu-end[data-bs-popper] {
+  padding: 0;
+  border: solid 1px white;
+}

@@ -4,6 +4,8 @@
 @import "editcar";
 @import "show-car";
 @import "new_car";
+@import "my-car-request";
+
 
 .link_to{
   text-decoration: none;
@@ -15,4 +17,8 @@
   font-style: italic;
   margin-left: 50px;
   margin-top: 20px;
+}
+
+.mappy .mapboxgl-ctrl-geocoder > input:focus {
+  color:black;
 }

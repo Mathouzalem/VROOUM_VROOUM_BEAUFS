@@ -1,41 +1,42 @@
 <%# TODO: Check le css !! %>
 
-<%= @car.title %>
-<% @car.bookings.each do |booking| %>
 
-<div class="bookings">
-  <div class="booking">
-        <div class="booking-info">
-          <div class="booking-info-title">
-            <%= booking.user.first_name %>
-          </div>
-          <div class="booking-info-details">
-            <%= booking.start_date.strftime('%l:%M %p') %> - <%= booking.end_date.strftime('%l:%M %p') %>
-          </div>
-        </div>
-      </div>
-  <div class="booking-actions">
-    <% if booking.status == "En attente" %>
-
-    <div class="d-flex">
-      <%= simple_form_for booking do |f| %>
-        <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-        <%= f.submit 'Accepter', class: 'btn btn-info' %>
-      <% end %>
-
-      <%= simple_form_for booking do |f| %>
-        <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-        <%= f.submit 'Rejecter', class: 'btn btn-light' %>
-      <% end %>
+<div class="fond-cards-booking">
+  <div class="container">
+    <div>
+    <br>
+      <%= link_to "Retour",  mycars_path, class:"btn-booking-retour"%>
     </div>
-
-  <% else %>
-    <%= booking.status %>
-
-  <% end %>
+    <h1 id ="booking-title"><%= @car.title %></h1>
+    <% if @car.bookings.first != nil %>
+      <div class="booking-grid">
+        <% @car.bookings.each do |booking| %>
+          <div class="booking-card">
+            <div class="booking-card-title">
+              <h5><strong><%= booking.user.first_name %></strong></h5>
+              <p><%= booking.start_date.strftime('%l:%M %p') %> - <%= booking.end_date.strftime('%l:%M %p') %></p>
+            </div>
+            <div class="booking-actions">
+              <% if booking.status == "En Attente" %>
+                <div class="d-flex">
+                  <%= simple_form_for booking do |f| %>
+                    <%= f.input :status, as: :hidden, input_html: { value: 'accepté'} %>
+                    <%= f.submit 'Accepter', class: 'btn-accepter' %>
+                  <% end %>
+                  <%= simple_form_for booking do |f| %>
+                    <%= f.input :status, as: :hidden, input_html: { value: 'rejeté'} %>
+                    <%= f.submit 'Rejeter', class: 'btn-rejeter' %>
+                  <% end %>
+                </div>
+              <% else %>
+                <p id="p-status"><%= booking.status %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p id="p-status">Pas de demande de locations sur votre gova</p>
+    <% end  %>
   </div>
-
-
-
-  <%end %>
 </div>
