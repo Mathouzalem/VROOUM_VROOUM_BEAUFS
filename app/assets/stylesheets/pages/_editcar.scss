@@ -55,6 +55,10 @@ $vert: #B6FF1C;
   color: #4e4b4b;
   text-decoration: none;
 }
+
+.mapboxgl-ctrl-geocoder {
+  color: white !important;
+}
 // /* For tablets: */
 // @media screen and (min-width: 600px) {
 //   .container {
