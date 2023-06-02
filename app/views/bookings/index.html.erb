@@ -30,10 +30,6 @@
                     <% end %>
                 </div>
 
-                <% if booking.status != ("Annulé" || "Rejecté") %>
-                  <%= link_to "Annuler", cancel_booking_path(booking), class:"btn-annuler"%>
-                <% end %>
-
             </div>
     </div>
         <% end %>
