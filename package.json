@@ -8,6 +8,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.2.3",
     "flatpickr": "^4.6.13",
+    "star-rating.js": "^4.3.0",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1"
   },

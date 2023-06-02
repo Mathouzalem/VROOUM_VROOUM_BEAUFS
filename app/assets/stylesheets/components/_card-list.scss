@@ -55,7 +55,11 @@
 .card-list-booking-2{
   height: 100%;
   width: 29%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .fondmyindex {
   background-color: #000000;
   padding: 60px;

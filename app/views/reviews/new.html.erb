@@ -2,8 +2,8 @@
   <div class="form-card">
     <%= simple_form_for [@booking, @review] do |f| %>
       <%= f.input :comment, label: "Décrivez vos sensations après avoir fait vos gros wheeling dans votre pépite tunée" %>
-      <%= f.input :rate, label: "Notez vos sensations et faites pas le radin chacal /10" %>
-      <%= f.submit "Envoyer", class: "btn-gradnew" %>
+      <%= f.input :rate, collection: (1..10).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
+       <%= f.submit "Envoyer", class: "btn-gradnew" %>
     <% end %>
   </div>
   <%=image_tag("gif.gif" , class: "gif")%>

@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
+
 // Import Bootsrap
 @import "bootstrap/scss/bootstrap";
 
@@ -20,3 +21,8 @@
 
 // Import Form css
 @import "flatpickr/dist/flatpickr.css";
+
+
+
+@import "star-rating.js/dist/star-rating.css";
+
