@@ -1,9 +1,15 @@
 <%# TODO: Check le css !! %>
 
 
-<div class="fond-cards">
+<div class="fond-cards-booking">
 <div class="container">
+<div>
+<br>
+  <%= link_to "Retour",  mycars_path, class:"btn-booking-retour"%>
+  </div>
   <h1 id ="booking-title"><%= @car.title %></h1>
+
+  <div class="booking-grid">
     <% @car.bookings.each do |booking| %>
   <div class="booking-card">
       <div class="booking-card-title">
@@ -15,18 +21,19 @@
           <div class="d-flex">
             <%= simple_form_for booking do |f| %>
               <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-              <%= f.submit 'Accepter', class: 'btn btn-info' %>
+              <%= f.submit 'Accepter', class: 'btn-accepter' %>
             <% end %>
             <%= simple_form_for booking do |f| %>
               <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-              <%= f.submit 'Rejecter', class: 'btn btn-light' %>
+              <%= f.submit 'Rejeter', class: 'btn-rejeter' %>
             <% end %>
           </div>
         <% else %>
-          <%= booking.status %>
+          <p id="p-status"><%= booking.status %></p>
         <% end %>
       </div>
   </div>
     <% end %>
+    </div>
   </div>
 </div>
